@@ -44,9 +44,11 @@ function initilize() {
 
   var loader = new GLTFLoader();
   const interaction = new Interaction(renderer, scene, camera);
-  
   let awsSphere;
-  loader.load( '3d/sphere-aws.glb', gltf => {
+
+  console.log('1')
+  loader.load('3d/sphere-aws.glb', gltf => {
+    console.log('2')
     awsSphere = gltf.scene;
     awsSphere.cursor = 'pointer';
     awsSphere.on('click', function(ev) {
